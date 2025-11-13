@@ -67,7 +67,6 @@ export function BenchmarkChart() {
                 }}
               />
               <span className="text-muted-foreground">{item.name.replace('\n', ' ')}</span>
-              <span className="font-semibold text-foreground">{item.value}%</span>
             </div>
           ))}
         </div>
