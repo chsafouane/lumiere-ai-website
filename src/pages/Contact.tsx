@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { EnvelopeSimple, Globe, MapPin, PaperPlaneTilt } from '@phosphor-icons/react'
 import { Button } from '@/components/ui/button'
@@ -5,7 +6,6 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Label } from '@/components/ui/label'
 import { toast } from 'sonner'
-import { useState } from 'react'
 
 export function Contact() {
   const [formData, setFormData] = useState({

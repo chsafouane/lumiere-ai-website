@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
 import { List, X } from '@phosphor-icons/react'
 import lumiereLogo from '@/assets/images/lumiere-logo.svg'
@@ -7,6 +7,7 @@ import { OurApproach } from '@/pages/OurApproach'
 import { Vision } from '@/pages/Vision'
 import { WhyUs } from '@/pages/WhyUs'
 import { Contact } from '@/pages/Contact'
+import { Toaster } from '@/components/ui/sonner'
 
 function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -111,6 +112,7 @@ function App() {
           </Routes>
         </div>
         <Footer />
+        <Toaster />
       </div>
     </Router>
   )
