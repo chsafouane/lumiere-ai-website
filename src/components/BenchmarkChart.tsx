@@ -9,17 +9,12 @@ const data = [
 
 export function BenchmarkChart() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: 0.2 }}
-      className="relative w-full h-[400px] md:h-[500px] bg-gradient-to-br from-card/80 to-background/60 backdrop-blur-sm border-2 border-border/50 rounded-xl p-6 md:p-8 overflow-hidden"
+    <div className="relative w-full h-[400px] md:h-[500px] bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 md:p-8 overflow-hidden"
     >
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,oklch(0.25_0.02_265_/_0.1)_1px,transparent_1px),linear-gradient(to_bottom,oklch(0.25_0.02_265_/_0.1)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,oklch(0.25_0.02_265_/_0.05)_1px,transparent_1px),linear-gradient(to_bottom,oklch(0.25_0.02_265_/_0.05)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
       
       <div className="relative z-10">
-        <h3 className="text-xl md:text-2xl font-display font-bold mb-2 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+        <h3 className="text-xl md:text-2xl font-display font-bold mb-2 text-foreground">
           Performance Comparison
         </h3>
         <p className="text-sm text-muted-foreground mb-6">Task Completion Efficiency (%)</p>
@@ -42,13 +37,13 @@ export function BenchmarkChart() {
             />
             <Bar dataKey="value" radius={[8, 8, 0, 0]} barSize={80}>
               {data.map((entry, index) => (
-                <Cell 
-                  key={`cell-${index}`} 
+                <Cell
+                  key={`cell-${index}`}
                   fill={entry.color}
                   stroke={entry.color}
-                  strokeWidth={2}
+                  strokeWidth={1}
                   style={{
-                    filter: `drop-shadow(0 4px 12px ${entry.color}40)`
+                    filter: `drop-shadow(0 2px 6px ${entry.color}20)`
                   }}
                 />
               ))}
@@ -59,11 +54,11 @@ export function BenchmarkChart() {
         <div className="mt-4 flex flex-wrap justify-center gap-4 text-xs md:text-sm">
           {data.map((item, index) => (
             <div key={index} className="flex items-center gap-2">
-              <div 
-                className="w-3 h-3 rounded-sm" 
-                style={{ 
+              <div
+                className="w-3 h-3 rounded-sm"
+                style={{
                   backgroundColor: item.color,
-                  boxShadow: `0 0 8px ${item.color}80`
+                  boxShadow: `0 0 4px ${item.color}40`
                 }}
               />
               <span className="text-muted-foreground">{item.name.replace('\n', ' ')}</span>
@@ -71,6 +66,6 @@ export function BenchmarkChart() {
           ))}
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }

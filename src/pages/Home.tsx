@@ -14,21 +14,52 @@ export function Home() {
     <main>
       <section className="py-20 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div {...fadeInUp} className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-b from-foreground via-primary to-accent bg-clip-text text-transparent">
-              Autonomous Agents for Enterprise Operations
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground">
-              Autonomous agents for real business problems
-            </p>
-          </motion.div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Hero Content */}
+            <motion.div {...fadeInUp} className="space-y-8">
+              <div>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent">
+                  Autonomous Agents for Enterprise Operations
+                </h1>
+                <p className="text-lg md:text-xl text-muted-foreground mb-8">
+                  Building autonomous agents that execute real business workflows, not just answer questions.
+                </p>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-base rounded-lg transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 text-center"
+                >
+                  Get Started
+                </a>
+                <a
+                  href="/our-approach"
+                  className="px-8 py-4 bg-card hover:bg-card/80 border-2 border-border hover:border-primary/50 text-foreground font-semibold text-base rounded-lg transition-all text-center"
+                >
+                  Learn More
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Right Column - Performance Chart */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <BenchmarkChart />
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      <section id="who-we-are" className="py-20 bg-gradient-to-br from-card/40 via-card/30 to-background/20 backdrop-blur-sm border-y border-border/30">
+      <section id="who-we-are" className="py-20 bg-card/30 border-y border-border/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeInUp}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Who We Are</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">Who We Are</h2>
             <div className="space-y-4 text-base md:text-lg leading-relaxed">
               <p>
                 LumiereAI is a French AI startup with a straightforward thesis: the next major transformation for businesses is agentic transformation – moving from AI that assists to AI that autonomously executes.
@@ -47,7 +78,7 @@ export function Home() {
       <section id="what-we-build" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeInUp}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">What We Build</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">What We Build</h2>
             <h3 className="text-2xl font-semibold mb-8">Autonomous Agents That Actually Execute</h3>
             
             <div className="mb-12 space-y-3">
@@ -63,7 +94,7 @@ export function Home() {
 
             <h4 className="text-xl font-semibold mb-6">What We've Built So Far:</h4>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-              <Card className="border-2 border-[oklch(0.65_0.25_350_/_0.3)] hover:shadow-xl hover:shadow-[oklch(0.65_0.25_350_/_0.2)] transition-all hover:border-[oklch(0.65_0.25_350)] bg-card/50 backdrop-blur-sm">
+              <Card className="border border-border/50 hover:border-primary/50 transition-all bg-card/50 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="text-lg">Product Onboarding Automation</CardTitle>
                 </CardHeader>
@@ -74,7 +105,7 @@ export function Home() {
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-[oklch(0.70_0.20_50_/_0.3)] hover:shadow-xl hover:shadow-[oklch(0.70_0.20_50_/_0.2)] transition-all hover:border-[oklch(0.70_0.20_50)] bg-card/50 backdrop-blur-sm">
+              <Card className="border border-border/50 hover:border-primary/50 transition-all bg-card/50 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="text-lg">JobsMatcher</CardTitle>
                 </CardHeader>
@@ -85,7 +116,7 @@ export function Home() {
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-[oklch(0.65_0.25_265_/_0.3)] hover:shadow-xl hover:shadow-[oklch(0.65_0.25_265_/_0.2)] transition-all hover:border-[oklch(0.65_0.25_265)] bg-card/50 backdrop-blur-sm">
+              <Card className="border border-border/50 hover:border-primary/50 transition-all bg-card/50 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="text-lg">Sales Forecasting Intelligence</CardTitle>
                 </CardHeader>
@@ -96,7 +127,7 @@ export function Home() {
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-[oklch(0.65_0.25_350_/_0.3)] hover:shadow-xl hover:shadow-[oklch(0.65_0.25_350_/_0.2)] transition-all hover:border-[oklch(0.65_0.25_350)] bg-card/50 backdrop-blur-sm">
+              <Card className="border border-border/50 hover:border-primary/50 transition-all bg-card/50 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="text-lg">Medical Practice Assistant</CardTitle>
                 </CardHeader>
@@ -107,7 +138,7 @@ export function Home() {
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-[oklch(0.70_0.20_50_/_0.3)] hover:shadow-xl hover:shadow-[oklch(0.70_0.20_50_/_0.2)] transition-all hover:border-[oklch(0.70_0.20_50)] bg-card/50 backdrop-blur-sm">
+              <Card className="border border-border/50 hover:border-primary/50 transition-all bg-card/50 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="text-lg">Agentic Voice Assistant</CardTitle>
                 </CardHeader>
@@ -118,8 +149,6 @@ export function Home() {
                 </CardContent>
               </Card>
             </div>
-
-            <BenchmarkChart />
           </motion.div>
         </div>
       </section>
