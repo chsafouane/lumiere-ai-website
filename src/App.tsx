@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { motion } from 'framer-motion'
 import lumiereLogo from '@/assets/images/lumiere-logo.svg'
+import { BenchmarkChart } from '@/components/BenchmarkChart'
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -39,14 +40,14 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-lg bg-white/95 flex items-center justify-center p-1.5 shadow-lg shadow-white/10">
+              <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center p-1.5 shadow-lg shadow-primary/40">
                 <img 
                   src={lumiereLogo} 
                   alt="Lumiere AI Logo" 
                   className="h-full w-full logo-rotate"
                 />
               </div>
-              <span className="font-display font-bold text-xl bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">LUMIERE AI</span>
+              <span className="font-display font-bold text-xl bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">LUMIERE AI</span>
             </div>
             
             <div className="hidden md:flex gap-8">
@@ -89,20 +90,28 @@ function App() {
         <section className="py-20 md:py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div {...fadeInUp} className="text-center max-w-4xl mx-auto">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-b from-foreground via-foreground to-foreground/60 bg-clip-text text-transparent">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-b from-foreground via-primary to-accent bg-clip-text text-transparent">
                 Autonomous Agents for Enterprise Operations
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-8">
                 Autonomous agents for real business problems
               </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/50">
+                  Get Started
+                </Button>
+                <Button size="lg" variant="outline" className="border-primary/50 hover:border-primary hover:bg-primary/10">
+                  Learn More
+                </Button>
+              </div>
             </motion.div>
           </div>
         </section>
 
-        <section id="who-we-are" className="py-20 bg-card/30 backdrop-blur-sm border-y border-border/30">
+        <section id="who-we-are" className="py-20 bg-gradient-to-br from-card/40 via-card/30 to-background/20 backdrop-blur-sm border-y border-border/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div {...fadeInUp}>
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">Who We Are</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Who We Are</h2>
               <div className="space-y-4 text-base md:text-lg leading-relaxed">
                 <p>
                   LumiereAI is a French AI startup with a straightforward thesis: the next major transformation for businesses is agentic transformation – moving from AI that assists to AI that autonomously executes.
@@ -136,8 +145,8 @@ function App() {
               </div>
 
               <h4 className="text-xl font-semibold mb-6">What We've Built So Far:</h4>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <Card className="border-2 border-border/50 hover:shadow-xl hover:shadow-foreground/5 transition-all hover:border-foreground/30 bg-card/50 backdrop-blur-sm">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <Card className="border-2 border-[oklch(0.65_0.25_350_/_0.3)] hover:shadow-xl hover:shadow-[oklch(0.65_0.25_350_/_0.2)] transition-all hover:border-[oklch(0.65_0.25_350)] bg-card/50 backdrop-blur-sm">
                   <CardHeader>
                     <CardTitle className="text-lg">Product Onboarding Automation</CardTitle>
                   </CardHeader>
@@ -148,7 +157,7 @@ function App() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 border-border/50 hover:shadow-xl hover:shadow-foreground/5 transition-all hover:border-foreground/30 bg-card/50 backdrop-blur-sm">
+                <Card className="border-2 border-[oklch(0.70_0.20_50_/_0.3)] hover:shadow-xl hover:shadow-[oklch(0.70_0.20_50_/_0.2)] transition-all hover:border-[oklch(0.70_0.20_50)] bg-card/50 backdrop-blur-sm">
                   <CardHeader>
                     <CardTitle className="text-lg">JobsMatcher</CardTitle>
                   </CardHeader>
@@ -159,7 +168,7 @@ function App() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 border-border/50 hover:shadow-xl hover:shadow-foreground/5 transition-all hover:border-foreground/30 bg-card/50 backdrop-blur-sm">
+                <Card className="border-2 border-[oklch(0.65_0.25_265_/_0.3)] hover:shadow-xl hover:shadow-[oklch(0.65_0.25_265_/_0.2)] transition-all hover:border-[oklch(0.65_0.25_265)] bg-card/50 backdrop-blur-sm">
                   <CardHeader>
                     <CardTitle className="text-lg">Sales Forecasting Intelligence</CardTitle>
                   </CardHeader>
@@ -170,7 +179,7 @@ function App() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 border-border/50 hover:shadow-xl hover:shadow-foreground/5 transition-all hover:border-foreground/30 bg-card/50 backdrop-blur-sm">
+                <Card className="border-2 border-[oklch(0.65_0.25_350_/_0.3)] hover:shadow-xl hover:shadow-[oklch(0.65_0.25_350_/_0.2)] transition-all hover:border-[oklch(0.65_0.25_350)] bg-card/50 backdrop-blur-sm">
                   <CardHeader>
                     <CardTitle className="text-lg">Medical Practice Assistant</CardTitle>
                   </CardHeader>
@@ -181,7 +190,7 @@ function App() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 border-border/50 hover:shadow-xl hover:shadow-foreground/5 transition-all hover:border-foreground/30 bg-card/50 backdrop-blur-sm">
+                <Card className="border-2 border-[oklch(0.70_0.20_50_/_0.3)] hover:shadow-xl hover:shadow-[oklch(0.70_0.20_50_/_0.2)] transition-all hover:border-[oklch(0.70_0.20_50)] bg-card/50 backdrop-blur-sm">
                   <CardHeader>
                     <CardTitle className="text-lg">Agentic Voice Assistant</CardTitle>
                   </CardHeader>
@@ -192,20 +201,22 @@ function App() {
                   </CardContent>
                 </Card>
               </div>
+
+              <BenchmarkChart />
             </motion.div>
           </div>
         </section>
 
-        <section id="our-approach" className="py-20 bg-card/30 backdrop-blur-sm border-y border-border/30">
+        <section id="our-approach" className="py-20 bg-gradient-to-br from-card/40 via-card/30 to-background/20 backdrop-blur-sm border-y border-border/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div {...fadeInUp}>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">Our Approach</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Our Approach</h2>
               <p className="text-lg mb-12">
                 We've developed a methodology that balances speed with proper adoption:
               </p>
 
               <div className="grid md:grid-cols-3 gap-8">
-                <Card className="border-2 border-border/50 bg-card/50 backdrop-blur-sm hover:border-foreground/30 transition-all">
+                <Card className="border-2 border-[oklch(0.65_0.25_350_/_0.3)] bg-card/50 backdrop-blur-sm hover:border-[oklch(0.65_0.25_350)] hover:shadow-lg hover:shadow-[oklch(0.65_0.25_350_/_0.2)] transition-all">
                   <CardHeader>
                     <CardTitle className="text-2xl">Phase 1: Assessment</CardTitle>
                   </CardHeader>
@@ -223,7 +234,7 @@ function App() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 border-border/50 bg-card/50 backdrop-blur-sm hover:border-foreground/30 transition-all">
+                <Card className="border-2 border-[oklch(0.70_0.20_50_/_0.3)] bg-card/50 backdrop-blur-sm hover:border-[oklch(0.70_0.20_50)] hover:shadow-lg hover:shadow-[oklch(0.70_0.20_50_/_0.2)] transition-all">
                   <CardHeader>
                     <CardTitle className="text-2xl">Phase 2: Build</CardTitle>
                   </CardHeader>
@@ -242,7 +253,7 @@ function App() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 border-border/50 bg-card/50 backdrop-blur-sm hover:border-foreground/30 transition-all">
+                <Card className="border-2 border-[oklch(0.65_0.25_265_/_0.3)] bg-card/50 backdrop-blur-sm hover:border-[oklch(0.65_0.25_265)] hover:shadow-lg hover:shadow-[oklch(0.65_0.25_265_/_0.2)] transition-all">
                   <CardHeader>
                     <CardTitle className="text-2xl">Phase 3: Optimize</CardTitle>
                   </CardHeader>
@@ -267,7 +278,7 @@ function App() {
         <section id="how-it-works" className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div {...fadeInUp}>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">How It Actually Works: Our Orchestration System</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">How It Actually Works: Our Orchestration System</h2>
               <p className="text-lg mb-12">
                 We've built a proprietary multi-layer orchestration system for managing complex agent operations. It's inspired by research from Anthropic and Microsoft, but adapted for real enterprise environments.
               </p>
@@ -275,7 +286,7 @@ function App() {
               <h3 className="text-2xl font-semibold mb-8">The Architecture:</h3>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-                <Card className="border-2 border-foreground/30 bg-gradient-to-br from-foreground/10 to-foreground/5 text-foreground shadow-lg shadow-foreground/10">
+                <Card className="border-2 border-primary bg-gradient-to-br from-primary/20 to-primary/5 text-foreground shadow-xl shadow-primary/30">
                   <CardHeader>
                     <CardTitle className="text-xl">ORCHESTRATOR</CardTitle>
                   </CardHeader>
@@ -286,7 +297,7 @@ function App() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 border-foreground/20 bg-gradient-to-br from-foreground/5 to-muted/20 text-foreground shadow-lg shadow-foreground/5">
+                <Card className="border-2 border-[oklch(0.70_0.20_50)] bg-gradient-to-br from-[oklch(0.70_0.20_50_/_0.2)] to-[oklch(0.70_0.20_50_/_0.05)] text-foreground shadow-xl shadow-[oklch(0.70_0.20_50_/_0.3)]">
                   <CardHeader>
                     <CardTitle className="text-xl">SUPERVISOR</CardTitle>
                   </CardHeader>
@@ -297,7 +308,7 @@ function App() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 border-foreground/20 bg-gradient-to-br from-foreground/5 to-muted/20 text-foreground shadow-lg shadow-foreground/5">
+                <Card className="border-2 border-[oklch(0.65_0.25_350)] bg-gradient-to-br from-[oklch(0.65_0.25_350_/_0.2)] to-[oklch(0.65_0.25_350_/_0.05)] text-foreground shadow-xl shadow-[oklch(0.65_0.25_350_/_0.3)]">
                   <CardHeader>
                     <CardTitle className="text-xl">JUDGE</CardTitle>
                   </CardHeader>
@@ -308,7 +319,7 @@ function App() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 border-border/50 bg-card/50 backdrop-blur-sm hover:border-foreground/30 transition-all">
+                <Card className="border-2 border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all">
                   <CardHeader>
                     <CardTitle className="text-xl">WORKER AGENTS</CardTitle>
                   </CardHeader>
@@ -366,10 +377,10 @@ function App() {
           </div>
         </section>
 
-        <section id="vision" className="py-20 bg-card/30 backdrop-blur-sm border-y border-border/30">
+        <section id="vision" className="py-20 bg-gradient-to-br from-card/40 via-card/30 to-background/20 backdrop-blur-sm border-y border-border/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div {...fadeInUp}>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">Our Long-Term Vision: Agent as a Service</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Our Long-Term Vision: Agent as a Service</h2>
               <p className="text-lg mb-8">
                 Beyond custom builds, we're working toward something bigger: Agent as a Service (AaaS).
               </p>
@@ -393,7 +404,7 @@ function App() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 border-foreground/30 bg-gradient-to-br from-foreground/10 to-foreground/5 text-foreground shadow-lg shadow-foreground/10">
+                <Card className="border-2 border-primary bg-gradient-to-br from-primary/20 to-primary/5 text-foreground shadow-xl shadow-primary/30">
                   <CardHeader>
                     <CardTitle className="text-xl">Our Agent:</CardTitle>
                   </CardHeader>
@@ -533,7 +544,7 @@ function App() {
                 </p>
               </div>
 
-              <div className="mt-12 p-8 border-2 border-foreground/30 bg-gradient-to-br from-foreground/10 to-foreground/5 shadow-xl shadow-foreground/10 rounded-lg">
+              <div className="mt-12 p-8 border-2 border-primary bg-gradient-to-br from-primary/20 to-primary/5 shadow-xl shadow-primary/30 rounded-lg">
                 <h3 className="text-2xl font-semibold mb-4">Our Mission</h3>
                 <p className="text-lg">
                   Build autonomous agent systems that actually work in real enterprise environments, helping European companies lead in the shift from assistive to agentic AI.
@@ -543,10 +554,10 @@ function App() {
           </div>
         </section>
 
-        <section id="contact" className="py-20 bg-card/30 backdrop-blur-sm border-y border-border/30">
+        <section id="contact" className="py-20 bg-gradient-to-br from-card/40 via-card/30 to-background/20 backdrop-blur-sm border-y border-border/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div {...fadeInUp}>
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">Get In Touch</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Get In Touch</h2>
               <div className="space-y-4 text-lg mb-12">
                 <p>
                   If you're thinking about how autonomous agents could help your operations, we'd be happy to discuss specifics.
@@ -558,27 +569,27 @@ function App() {
 
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <EnvelopeSimple size={24} weight="bold" />
+                  <EnvelopeSimple size={24} weight="bold" className="text-primary" />
                   <div>
                     <p className="font-semibold mb-1">Email</p>
-                    <a href="mailto:contact@lumiereai.dev" className="text-lg hover:underline">
+                    <a href="mailto:contact@lumiereai.dev" className="text-lg hover:underline text-primary">
                       contact@lumiereai.dev
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <Globe size={24} weight="bold" />
+                  <Globe size={24} weight="bold" className="text-[oklch(0.70_0.20_50)]" />
                   <div>
                     <p className="font-semibold mb-1">Web</p>
-                    <a href="https://www.lumiere-ai.fr" target="_blank" rel="noopener noreferrer" className="text-lg hover:underline">
+                    <a href="https://www.lumiere-ai.fr" target="_blank" rel="noopener noreferrer" className="text-lg hover:underline text-[oklch(0.70_0.20_50)]">
                       www.lumiere-ai.fr
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <MapPin size={24} weight="bold" />
+                  <MapPin size={24} weight="bold" className="text-[oklch(0.65_0.25_350)]" />
                   <div>
                     <p className="font-semibold mb-1">Based in</p>
                     <p className="text-lg">Paris, France</p>
