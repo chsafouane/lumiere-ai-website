@@ -90,7 +90,7 @@ function Footer() {
     <footer className="py-8 border-t border-border/50 bg-card/20 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p className="text-sm text-muted-foreground">
-          © 2024 Lumiere AI - Autonomous agents for real business problems
+          © 2025 Lumiere AI - Autonomous agents for real business problems
         </p>
       </div>
     </footer>
