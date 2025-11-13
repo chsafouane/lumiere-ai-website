@@ -39,12 +39,13 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-3">
-              <img 
-                src={lumiereLogo} 
-                alt="Lumiere AI Logo" 
-                className="h-10 w-10 logo-rotate text-foreground"
-                style={{ filter: 'invert(1) brightness(1.2)' }}
-              />
+              <div className="h-10 w-10 rounded-lg bg-white/95 flex items-center justify-center p-1.5 shadow-lg shadow-white/10">
+                <img 
+                  src={lumiereLogo} 
+                  alt="Lumiere AI Logo" 
+                  className="h-full w-full logo-rotate"
+                />
+              </div>
               <span className="font-display font-bold text-xl bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">LUMIERE AI</span>
             </div>
             

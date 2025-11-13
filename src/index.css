@@ -8,24 +8,24 @@
 }
 
 :root {
-  --background: oklch(0.08 0 0);
+  --background: oklch(0.18 0 0);
   --foreground: oklch(0.98 0 0);
-  --card: oklch(0.12 0 0);
+  --card: oklch(0.22 0 0);
   --card-foreground: oklch(0.98 0 0);
-  --popover: oklch(0.12 0 0);
+  --popover: oklch(0.22 0 0);
   --popover-foreground: oklch(0.98 0 0);
   --primary: oklch(0.98 0 0);
-  --primary-foreground: oklch(0.08 0 0);
-  --secondary: oklch(0.18 0 0);
+  --primary-foreground: oklch(0.18 0 0);
+  --secondary: oklch(0.28 0 0);
   --secondary-foreground: oklch(0.98 0 0);
-  --muted: oklch(0.15 0 0);
-  --muted-foreground: oklch(0.65 0 0);
+  --muted: oklch(0.25 0 0);
+  --muted-foreground: oklch(0.70 0 0);
   --accent: oklch(0.98 0 0);
-  --accent-foreground: oklch(0.08 0 0);
+  --accent-foreground: oklch(0.18 0 0);
   --destructive: oklch(0.55 0.22 25);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.22 0 0);
-  --input: oklch(0.22 0 0);
+  --border: oklch(0.32 0 0);
+  --input: oklch(0.32 0 0);
   --ring: oklch(0.98 0 0);
   --radius: 0.5rem;
 }
@@ -57,7 +57,7 @@
 
 body {
   font-family: var(--font-sans);
-  background: linear-gradient(135deg, oklch(0.08 0 0) 0%, oklch(0.12 0 0) 50%, oklch(0.08 0 0) 100%);
+  background: linear-gradient(135deg, oklch(0.18 0 0) 0%, oklch(0.22 0 0) 50%, oklch(0.18 0 0) 100%);
   background-attachment: fixed;
 }
 
@@ -69,8 +69,8 @@ body::before {
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 20% 30%, oklch(0.15 0 0 / 0.8) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, oklch(0.15 0 0 / 0.6) 0%, transparent 50%);
+    radial-gradient(circle at 20% 30%, oklch(0.25 0 0 / 0.8) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, oklch(0.25 0 0 / 0.6) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
