@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
 import { BenchmarkChart } from '@/components/BenchmarkChart'
-import { Link } from 'react-router-dom'
 
 export function Home() {
   const fadeInUp = {
@@ -20,17 +18,9 @@ export function Home() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-b from-foreground via-primary to-accent bg-clip-text text-transparent">
               Autonomous Agents for Enterprise Operations
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8">
+            <p className="text-lg md:text-xl text-muted-foreground">
               Autonomous agents for real business problems
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/50">
-                Get Started
-              </Button>
-              <Button size="lg" variant="outline" className="border-primary/50 hover:border-primary hover:bg-primary/10">
-                Learn More
-              </Button>
-            </div>
           </motion.div>
         </div>
       </section>
