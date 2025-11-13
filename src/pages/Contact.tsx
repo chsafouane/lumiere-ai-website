@@ -90,8 +90,8 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="font-semibold mb-1 text-lg">Web</p>
-                    <a href="https://www.lumiere-ai.fr" target="_blank" rel="noopener noreferrer" className="text-lg hover:underline text-[oklch(0.70_0.20_50)]">
-                      www.lumiere-ai.fr
+                    <a href="https://lumiereai.dev" target="_blank" rel="noopener noreferrer" className="text-lg hover:underline text-[oklch(0.70_0.20_50)]">
+                      lumiereai.dev
                     </a>
                   </div>
                 </div>
