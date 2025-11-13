@@ -42,7 +42,8 @@ function App() {
               <img 
                 src={lumiereLogo} 
                 alt="Lumiere AI Logo" 
-                className="h-10 w-10 logo-rotate"
+                className="h-10 w-10 logo-rotate text-foreground"
+                style={{ filter: 'invert(1) brightness(1.2)' }}
               />
               <span className="font-display font-bold text-xl bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">LUMIERE AI</span>
             </div>
