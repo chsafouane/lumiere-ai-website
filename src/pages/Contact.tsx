@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { EnvelopeSimple, Globe, MapPin, PaperPlaneTilt } from '@phosphor-icons/react'
 import { Button } from '@/components/ui/button'

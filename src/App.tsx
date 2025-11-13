@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
 import { List, X } from '@phosphor-icons/react'
 import lumiereLogo from '@/assets/images/lumiere-logo.svg'
