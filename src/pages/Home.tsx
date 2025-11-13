@@ -60,7 +60,7 @@ export function Home() {
       <section id="who-we-are" className="py-20 bg-card/30 border-y border-border/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeInUp}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">Who We Are</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Who We Are</h2>
             <div className="space-y-4 text-base md:text-lg leading-relaxed">
               <p>
                 LumiereAI is a French AI startup with a straightforward thesis: the next major transformation for businesses is agentic transformation – moving from AI that assists to AI that autonomously executes.
@@ -79,7 +79,7 @@ export function Home() {
       <section id="what-we-build" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeInUp}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">What We Build</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">What We Build</h2>
             <h3 className="text-2xl font-semibold mb-8">Autonomous Agents That Actually Execute</h3>
             
             <div className="mb-12 space-y-3">
