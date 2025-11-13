@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { BenchmarkChart } from '@/components/BenchmarkChart'
 
@@ -28,18 +29,18 @@ export function Home() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   className="px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-base rounded-lg transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 text-center"
                 >
-                  Get Started
-                </a>
-                <a
-                  href="/our-approach"
+                  Contact Us
+                </Link>
+                <Link
+                  to="/our-approach"
                   className="px-8 py-4 bg-card hover:bg-card/80 border-2 border-border hover:border-primary/50 text-foreground font-semibold text-base rounded-lg transition-all text-center"
                 >
                   Learn More
-                </a>
+                </Link>
               </div>
             </motion.div>
 
