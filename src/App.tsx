@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { motion } from 'framer-motion'
+import lumiereLogo from '@/assets/images/lumiere-logo.svg'
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -39,13 +40,9 @@ function App() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-3">
               <img 
-                src="/image.png" 
+                src={lumiereLogo} 
                 alt="Lumiere AI Logo" 
                 className="h-10 w-10 logo-rotate"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement
-                  target.style.display = 'none'
-                }}
               />
               <span className="font-display font-bold text-xl">LUMIERE AI</span>
             </div>
